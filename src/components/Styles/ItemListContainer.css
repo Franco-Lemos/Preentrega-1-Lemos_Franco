@@ -1,0 +1,7 @@
+h2 {
+    border-radius: solid 2px black;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 50px;
+}

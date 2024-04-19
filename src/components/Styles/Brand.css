@@ -1,0 +1,11 @@
+.Logo{
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.LogoP{
+    display:none !important;
+}

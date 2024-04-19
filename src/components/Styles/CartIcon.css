@@ -1,0 +1,15 @@
+.Cart>span{
+    left: -10px;
+    color: white;
+    position: relative;
+    display: inline-flex;
+    background-color: rgba(199, 44, 39, 0.998);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+}
