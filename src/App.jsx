@@ -1,18 +1,13 @@
 import './App.css'
-import Brand from "./components/Brand";
-import Navbar from "./components/NavBar";
+import Layout from "./components/Layout";
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
   return (
-    <div>
-      <div className='headerWrapper'>
-      <Brand />
-      <Navbar />
-      </div>
-      <ItemListContainer say="¡Bienvenidos a Tamriel &quot;Artilujios & Baratijas&quot;!"/>
-    </div>
+    <Layout>
+      <ItemListContainer say = {"¡Bienvenidos a Tamriel \"Artilugios & Baratijas\"!"} />
+    </Layout>
   );
 }
 

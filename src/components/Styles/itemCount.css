@@ -1,0 +1,14 @@
+.itemCountContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemCountCounterContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.itemCountButton{
+    padding: 5px 10px;
+}

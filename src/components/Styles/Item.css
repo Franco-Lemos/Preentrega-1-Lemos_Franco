@@ -1,0 +1,27 @@
+.item {
+  border: 2px solid #000;
+  padding: 10px 22px;
+  border-radius: 20px;
+}
+
+.itemImg {
+  height: 300px;
+  width: 100%;
+}
+
+.itemTitle{
+  font-size: clamp(1rem, 5vw, 2em);
+  margin-top: 5px;
+}
+
+.itemDescription{
+  color: #4b5056;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow-x: hidden;
+}
+
+/* .itemDescription::-webkit-scrollbar {
+  display: none;
+} */
