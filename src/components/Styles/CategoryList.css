@@ -11,12 +11,17 @@
   padding: 10px;
 }
 
+nav ul{
+  margin-top: revert !important;
+}
+
 .CategoryList a:link, a:visited, a:hover a:active{
   text-decoration: none;
   color: black;
   border-radius: 50px;
   font-size: 32px;
-  background-color: yellow;
+  background: rgb(255,251,8);
+  background: linear-gradient(0deg, rgba(255,251,8,1) 0%, rgba(217,101,12,1) 100%);
   font-size: 19px;
   font-weight: 600;
 }

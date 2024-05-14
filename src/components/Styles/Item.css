@@ -11,17 +11,37 @@
 
 .itemTitle{
   font-size: clamp(1rem, 5vw, 2em);
+  font-weight: 600;
   margin-top: 5px;
+  background: rgb(217,101,12);
+  background: linear-gradient(90deg, rgba(217,101,12,1) 9%, rgba(255,251,8,1) 49%, rgba(217,101,12,1) 83%);
+  color: transparent;
+  background-clip: text;
 }
 
 .itemDescription{
-  color: #4b5056;
+  color: #ffffff;
+  font-weight: 400;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow-x: hidden;
 }
 
-/* .itemDescription::-webkit-scrollbar {
-  display: none;
-} */
+.itemPrice{
+  color: #14a822;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+
+.buyContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card{
+  background-color: #1c1f22;
+}

@@ -18,19 +18,23 @@ export default function Item({ item }) {
         </div>
         <h2 className="itemTitle">{item.title}</h2>
         <p className="itemDescription">{item.description}</p>
-        <p className="itemPrice">${item.price}</p>
-        <div className="itemCounterContainer">
-          <ItemCount 
-          stock={item.stock}
-          count={count}
-          increment={increment}
-          decrement={decrement}
-          />
-        </div>
-        <div className="itemCartContainer">
-          <button className="itemCartButton" onClick={() => onAdd(item, count)}>
-            Añadir al carrito
-          </button>
+        <div className="buyContainer">
+          <p className="itemPrice">${item.price}</p>
+          <div>
+            <div className="itemCounterContainer">
+              <ItemCount 
+              stock={item.stock}
+              count={count}
+              increment={increment}
+              decrement={decrement}
+              />
+            </div>
+            <div className="itemCartContainer">
+              <button className="itemCartButton" onClick={() => onAdd(item, count)}>
+                Añadir al carrito
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

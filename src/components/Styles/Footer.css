@@ -1,0 +1,12 @@
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  background-color: #1c1f22;
+  color: aliceblue;
+  height: 100px;
+  margin-top: 2rem;
+}
+
+.footerContainer p {
+  margin: auto;
+}

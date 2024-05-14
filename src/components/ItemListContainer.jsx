@@ -5,7 +5,7 @@ import useProducts from "./Hooks/useProducts";
 function ItemListContainer({say}){
   const {isLoading, products} = useProducts();
 
-  if(isLoading) return <h1>Cargando...</h1>
+  if(isLoading) return <div className="loadingContainer"><h1 className="loadingText">Cargando...</h1></div>
   
   return (
     <div>
