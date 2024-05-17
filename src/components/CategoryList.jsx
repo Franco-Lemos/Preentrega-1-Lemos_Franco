@@ -5,17 +5,17 @@ const MY_ROUTES = [{
   path: "/inicio",
   label: "Inicio"
 },{
-  path: "/productos",
-  label: "Productos"
+  path: "/category/indumentaria",
+  label: "Ropa"
 },{
-  path: "/ubicación",
-  label: "Ubicación"
+  path: "/category/libros",
+  label: "Libros"
 },{
-  path: "/pedidos",
-  label: "Pedidos"
+  path: "/category/funko-pop",
+  label: "Funko-Pop"
 },{
-  path: "/contactos",
-  label: "Contactos"
+  path: "/category/coleccionables",
+  label: "Baratijas"
 },]
 
 function CategoryList(){

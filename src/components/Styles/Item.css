@@ -4,6 +4,10 @@
   border-radius: 20px;
 }
 
+.itemId {
+  width: 30% !important;
+}
+
 .itemImg {
   height: 300px;
   width: 100%;
