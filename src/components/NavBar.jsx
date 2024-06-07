@@ -1,12 +1,18 @@
+import { useContext } from "react";
 import CartWidget from "./CartWidget";
 import CategoryList from "./CategoryList";
+import CartContext from "../context/CartContext";
 import "./Styles/NavBar.css"
 
 function NavBar() {
+  const { cart } = useContext(CartContext);
+
   return(
     <div id="navbar" className="NavBarWrapper">
       <CategoryList />
-      <CartWidget />
+      <div className={`${cart.length === 0 ? "hidden" : ""}`}>
+        <CartWidget />
+      </div>
     </div>
   )
 }

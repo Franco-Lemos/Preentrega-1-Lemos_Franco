@@ -5,7 +5,7 @@ const products = [
     price: 19.99,
     description: "La funda que estabas buscando para tu iphone 15.",
     image: "https://i.etsystatic.com/46228296/r/il/f7d5df/5597062106/il_794xN.5597062106_pthn.jpg",
-    category: "coleccionables",
+    category: "baratijas",
     stock: 7,
   },
   {
@@ -32,7 +32,7 @@ const products = [
     price: 5.50,
     description: "Llavero Escudo de Mará, dinosaurio triángulo cosplay Obliviion Morrowind Prop colgante.",
     image: "https://http2.mlstatic.com/D_NQ_NP_782715-MLA47444790374_092021-O.webp",
-    category: "coleccionables",
+    category: "baratijas",
     stock: 11,
   },
   {
@@ -49,7 +49,7 @@ const products = [
     price: 83.00,
     description: "Pullover rosado de algodón, estampado con la imágen del videojuegos The Elder Scrolls: Skyrim",
     image: "https://i5.walmartimages.com/seo/The-Elder-Scrolls-V-Skyrim-Hoodies-Hooded-Men-Women-Long-Sleeve-Pullover-Game-Merch_9f57ae88-82b2-481d-93c9-e42735cc5649.9ffd7e38e2895e044c94237dc34a754e.jpeg",
-    category: "indumentaria",
+    category: "ropa",
     stock: 5,
   },
   {
@@ -74,7 +74,7 @@ const products = [
     price: 48.00,
     description: "Pullover del colegio de mágia de Winterhold",
     image: "https://i.pinimg.com/originals/fd/2f/10/fd2f10d464436906ecdb6c91b433e4ba.png",
-    category: "indumentaria",
+    category: "ropa",
     stock: 4,
   },
   {
@@ -83,7 +83,7 @@ const products = [
     price: 12.99,
     description: "Piluso blanco con logo de \"Dark Brotherhood\"",
     image: "https://ih1.redbubble.net/image.3154673308.4831/ssrco,baseball_cap,product,FFFFFF:97ab1c12de,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.u1.jpg",
-    category: "indumentaria",
+    category: "ropa",
     stock: 8,
   },
   {
@@ -92,7 +92,7 @@ const products = [
     price: 1.00,
     description: "La moneda oficial utilizada en la provincia de Skyrim. Cada Septim está hecho de oro y presenta un grabado del dragón Alduin en un lado y el perfil del Emperador en el otro.",
     image: "https://www.geekcore.co.uk/cdn/shop/products/fanattik-coin-skyrim_1024x1024.jpg?v=1601283223",
-    category: "coleccionables",
+    category: "baratijas",
     stock: 99,
   },
   {
@@ -101,7 +101,7 @@ const products = [
     price: 65.99,
     description: "Descripción: Un morral resistente y espacioso con un diseño único que presenta el mapa detallado de la provincia de Skyrim.",
     image: "https://static.thcdn.com/images/large/original//productimg/1600/1600/12359400-5954718894965569.jpg",
-    category: "indumentaria",
+    category: "ropa",
     stock: 9,
   },
   {
@@ -109,7 +109,7 @@ const products = [
     title: "Libro \"Libro Rojo de Skyrim\"",
     price: 19.50,
     description: "Este lujoso volumen ilustrado recopila los textos clave para entender el universo de Skyrim. El hogar de los Nórdicos, una orgullosa raza guerrera, se enfrenta a su hora más oscura. Destruido por una guerra civil y bajo la amenaza del regreso de los legendarios dragones, el futuro de Skyrim pende de un hilo",
-    image: "https://static.wikia.nocookie.net/elderscrolls/images/b/b9/Book06a.png/revision/latest?cb=20121231021400",
+    image: "https://imgv2-1-f.scribdassets.com/img/document/449673558/original/777e0f3bf9/1714413172?v=1",
     category: "libros",
     stock: 12,
   },
@@ -218,7 +218,7 @@ export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products);
-    }, 2000)
+    }, 600)
   });
 };
 
@@ -226,7 +226,7 @@ export const getProductById = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find((product) => product.id === id));
-    }, 2000);
+    },600);
   })
 }
 
@@ -234,6 +234,6 @@ export const getProductByCategory = (category) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.filter((product) => product.category === category));
-    },2000);
+    },600);
   });
 }

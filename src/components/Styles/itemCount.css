@@ -1,18 +1,65 @@
 .itemCountContainer{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .itemCountCounterContainer{
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.itemCountButton{
-    padding: 5px 10px;
+.buttonAdd {
+  background-color:#1c1f22;
+	border-radius:35px;
+	border:2px solid #d9650c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px #dbb728;
+}
+.buttonAdd:hover {
+  background: #17a343;
 }
 
-.numCount {
-    color: white;
+.buttonAdd.disabled {
+  background: #888888;
+  border: 2px solid #666666;
+  cursor: not-allowed;
+}
+
+.buttonLessC {
+  background-color:#1c1f22;
+	border-radius:35px;
+	border:2px solid #d9650c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 26px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px #dbb728;
+}
+.buttonLessC:hover {
+  background: #cf2f29;
+}
+
+.buttonLessC.disabled {
+  background: #888888;
+  border: 2px solid #666666;
+  cursor: not-allowed;
+}
+
+.numCount{
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }

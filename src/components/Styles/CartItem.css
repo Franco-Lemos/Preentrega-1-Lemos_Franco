@@ -1,0 +1,110 @@
+.cartProductContainer{
+  background: #1c1f22;
+}
+
+.cartInfoProductContainer{
+  min-width: fit-content;
+}
+
+.cartItemImage{
+  height: 125px;
+  width: 125px;
+}
+
+.cartItemInfo{
+  color: #d9650c;
+  font-size: 17px;
+  font-weight: 600;
+  min-width: fit-content;
+}
+
+.d-contents{
+  display: contents;
+}
+
+.buttonAdd {
+  background-color:#1c1f22;
+	border-radius:35px;
+	border:2px solid #d9650c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px #dbb728;
+}
+.buttonAdd:hover {
+  background: #17a343;
+}
+
+.buttonAdd.disabled {
+  background: #888888;
+  border: 2px solid #666666;
+  cursor: not-allowed;
+}
+
+.buttonLess {
+  background-color:#1c1f22;
+	border-radius:35px;
+	border:2px solid #d9650c;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 22px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px #dbb728;
+}
+.buttonLess:hover {
+  background: #cf2f29;
+}
+
+.buttonRemove {
+  background: #a91d17;
+	border-radius:35px;
+	border:2px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px black;
+}
+.buttonRemove:hover {
+  background: #cf2f29;
+}
+
+div:where(.swal2-icon).swal2-success .swal2-success-ring {
+  border: .25em solid #d9650c67 !important;
+}
+
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+  background-color: #d9650c !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+  background: #313538 !important;
+  color: #d9650c !important;
+}
+
+.swal2-success-circular-line-left, .swal2-success-circular-line-right, .swal2-success-fix{
+  background-color: #313538 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  background-color: #d9650c !important;
+  color: #000 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+  box-shadow: 0 0 0 3px  #7e3a07ad !important;
+  ;
+}

@@ -1,22 +1,25 @@
-import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from "./components/Layout";
 import ItemListContainer from './components/ItemListContainer';
-// import Costume from './components/Costume';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import CategoryItemListContainer from './components/CategoryItemListContainer';
+import CartContainer from "./components/CartContainer.jsx"
+import CartProvider from './context/CartProvider.jsx'; //Visual Studio se bugeó y me da un error en esta línea (Ya comprobé que no hay errores).
+import './App.css'
 
 function App() {
 
   return (
     <BrowserRouter>
-    <Layout>
-      <Routes>
-        <Route path="/inicio" element={<ItemListContainer say = {"¡Bienvenidos a Tamriel \"Artilugios & Baratijas\"!"} />}/>
-        <Route path="/category/:id" element={<CategoryItemListContainer />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-      </Routes>
-    </Layout>
+      <CartProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<ItemListContainer say = {"¡Bienvenidos a Tamriel \"Artilugios & Baratijas\"!"} />}/>
+            <Route path="/category/:id" element={<ItemListContainer say = {"Sección {category}"} />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<CartContainer/>} />
+          </Routes>
+        </Layout>
+      </CartProvider>
     </BrowserRouter>
   );
 }

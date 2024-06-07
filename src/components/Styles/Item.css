@@ -35,7 +35,7 @@
 .itemPrice{
   color: #14a822;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 28px;
   margin: 0;
 }
 
@@ -48,4 +48,55 @@
 
 .card{
   background-color: #1c1f22;
+}
+
+.remainingStock {
+  color: grey;
+}
+
+.buttonAddToCart {
+  background: #17a921;
+	border-radius:35px;
+	border:2px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size: 15px;
+  font-weight: bold;
+  padding: 10px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px black;
+}
+.buttonAddToCart:hover {
+  background: #29cf37;
+}
+
+.buttonAddToCart.disabled {
+  background: #888888;
+  border: 2px solid #666666;
+  cursor: not-allowed;
+}
+
+.buttonMoreInfo {
+  background-color: #1c1f22;
+  border-radius: 35px;
+  border: 2px solid #d9650c;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-shadow: 0px 1px 3px #dbb728;
+  margin-top: 10px;
+}
+
+.buttonMoreInfo:hover {
+  background: #666666;
+  color: #000;
+  text-shadow: 0px 1px 3px #ffffff;
+  border: 2px solid #ffffff;
 }
