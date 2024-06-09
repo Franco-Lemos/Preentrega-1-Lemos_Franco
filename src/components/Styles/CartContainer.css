@@ -41,6 +41,7 @@ hr{
 }
 .buttonFinalize:hover {
   background: #29cf37;
+<<<<<<< HEAD
 }
 
 .formContainer {
@@ -63,4 +64,6 @@ hr{
 	border-color: #d9650c;
 	outline: 0;
 	box-shadow: 0 0 0 .25rem #ee6a0687;
+=======
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
 }

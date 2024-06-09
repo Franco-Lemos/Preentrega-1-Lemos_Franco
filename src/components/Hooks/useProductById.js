@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { useEffect, useState } from "react";
 // import { doc, getDoc } from "firebase/firestore";
 // import db from "../Hooks/firebase";
@@ -56,3 +57,28 @@ const useProductById = (id) => {
 };
 
 export default useProductById;
+=======
+import { useEffect, useState } from "react";
+import { getProductById } from "../Mocks/asyncMock";
+
+export default function useProductById(productId) {
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  console.log({ product });
+
+  useEffect(() => {
+    getProductById(productId)
+      .then((product) => {
+        setProduct(product);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+    }, [productId]);
+
+  return {
+    product,
+    loading,
+  };
+}
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5

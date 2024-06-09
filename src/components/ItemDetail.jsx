@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/components/ItemDetail.js
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -8,6 +9,16 @@ import ItemCount from './ItemCount';
 import './Styles/Item.css';
 import CartContext from '../context/CartContext';
 import db from './Hooks/firebase';
+=======
+import { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { getProductById } from '../components/Mocks/asyncMock';
+import useCount from "./Hooks/useCount";
+import ItemCount from "./ItemCount";
+import "./Styles/Item.css";
+import CartContext from '../context/CartContext';
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
 
 function ItemDetail() {
   const { id } = useParams();
@@ -24,6 +35,7 @@ function ItemDetail() {
 
   useEffect(() => {
     const fetchItem = async () => {
+<<<<<<< HEAD
       const docRef = doc(db, "items", id);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
@@ -31,6 +43,10 @@ function ItemDetail() {
       } else {
         console.log("No such document!");
       }
+=======
+      const itemData = await getProductById(parseInt(id));
+      setItem(itemData);
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
     };
     fetchItem();
   }, [id]);
@@ -65,7 +81,11 @@ function ItemDetail() {
                 onClick={handleAddToCart} 
                 disabled={count === 0 || count > currentStock}
               >
+<<<<<<< HEAD
                 Añadir al carrito
+=======
+                Añadir al carri
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
               </button>
             </div>
           </div>

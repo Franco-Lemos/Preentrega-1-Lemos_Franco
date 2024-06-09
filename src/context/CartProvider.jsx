@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import CartContext from "./CartContext";
+<<<<<<< HEAD
 import { doc, getDoc } from "firebase/firestore";
 import db from "../components/Hooks/firebase";
+=======
+import { getProductById } from '../components/Mocks/asyncMock';
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
 
 export default function CartProvider({ children }) {
   const [cart, setCart] = useState(
@@ -11,9 +15,13 @@ export default function CartProvider({ children }) {
   const addToCart = async (product, quantity) => {
     const itemInCart = cart.find((item) => item.product.id === product.id);
 
+<<<<<<< HEAD
     const productRef = doc(db, "items", product.id);
     const productSnap = await getDoc(productRef);
     const productData = productSnap.data();
+=======
+    const productData = await getProductById(product.id);
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
     const availableStock = productData.stock;
 
     const currentQuantityInCart = itemInCart ? itemInCart.quantity : 0;

@@ -19,7 +19,10 @@ hr {
   color: transparent;
   background-clip: text;
   animation: shine 4s linear infinite;
+<<<<<<< HEAD
   text-align: center;
+=======
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
 }
 
 .loadingText {

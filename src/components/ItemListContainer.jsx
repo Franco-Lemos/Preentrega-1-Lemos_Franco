@@ -7,7 +7,11 @@ function ItemListContainer({ say }) {
   const { id } = useParams();
   const { isLoading, products } = useProducts(id);
 
+<<<<<<< HEAD
   const category = id ? id.charAt(0).toUpperCase() + id.slice(1) : '';
+=======
+  const category = id ? id.charAt(0).toUpperCase() + id.slice(1) : ''; // Capitaliza la categoría
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
   const dynamicSay = say.replace("{category}", category);
 
   if (isLoading) return (

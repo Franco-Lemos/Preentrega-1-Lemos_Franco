@@ -215,4 +215,32 @@ const products = [
     category: "funko-pop",
     stock: 4,
   },
+<<<<<<< HEAD
 ]
+=======
+]
+
+export const getProducts = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products);
+    }, 600)
+  });
+};
+
+export const getProductById = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.find((product) => product.id === id));
+    },600);
+  })
+}
+
+export const getProductByCategory = (category) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.filter((product) => product.category === category));
+    },600);
+  });
+}
+>>>>>>> 9f6001387f146354158d1fb86c071679140917e5
