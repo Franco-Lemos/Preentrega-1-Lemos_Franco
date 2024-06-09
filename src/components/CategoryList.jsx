@@ -2,10 +2,10 @@ import "./Styles/CategoryList.css";
 import { NavLink } from "react-router-dom";
 
 const MY_ROUTES = [{
-  path: "/inicio",
+  path: "/",
   label: "Inicio"
 },{
-  path: "/category/indumentaria",
+  path: "/category/ropa",
   label: "Ropa"
 },{
   path: "/category/libros",
@@ -14,7 +14,7 @@ const MY_ROUTES = [{
   path: "/category/funko-pop",
   label: "Funko-Pop"
 },{
-  path: "/category/coleccionables",
+  path: "/category/baratijas",
   label: "Baratijas"
 },]
 

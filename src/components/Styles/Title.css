@@ -1,0 +1,56 @@
+hr {
+  color: white;
+  margin: 1rem 3rem;
+  border-top: 2px solid;
+  opacity: 1;
+}
+
+.welcome{
+  font-size: 4rem;
+  background: linear-gradient(
+  to right,
+  #d9650c 20%,
+  #fffb08 40%,
+  #ffffff 20%,
+  #fffb08 40%,
+  #d9650c 80%
+  );
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  text-align: center;
+}
+
+.loadingText {
+  margin: 2em, 0em, 10em;
+}
+
+.spinner-border {
+  --bs-spinner-width: 10rem;
+  --bs-spinner-height: 10rem;
+}
+
+.loadingContainer{
+  display: flex;
+  justify-content: center;
+  margin: 225px 0px 700px;
+}
+
+.title {
+  background-color: currentColor;
+  border-radius: 64px;
+  padding: 20px;
+  display: inline-block;
+  border: 2px solid #d9650c;
+}
+
+.vh-40{
+  height: 40vh;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

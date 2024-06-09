@@ -7,6 +7,10 @@ body {
     background-color: #1C1C1C;
 }
 
+a {
+    text-decoration: none;
+}
+
 .headerWrapper{
     display: flex;
     justify-content: space-between;

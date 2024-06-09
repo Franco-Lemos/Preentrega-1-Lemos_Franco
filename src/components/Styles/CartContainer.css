@@ -1,0 +1,66 @@
+hr{
+  color: #d9650c;
+}
+
+.totalText{
+  color: #d9650c;
+  -webkit-text-stroke: 1.7px #000000;
+}
+
+.buttonClear {
+  background: #a91d17;
+	border-radius:35px;
+	border:2px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px black;
+}
+.buttonClear:hover {
+  background: #cf2f29;
+}
+
+.buttonFinalize {
+  background: #17a921;
+	border-radius:35px;
+	border:2px solid black;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:16px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 3px black;
+}
+.buttonFinalize:hover {
+  background: #29cf37;
+}
+
+.formContainer {
+	border-radius: 64px;
+	background-color: #1c1f22;
+}
+
+.form {
+	color: #d9650c;
+}
+
+.form-control {
+	color: var(--bs-body-color);
+	background-color: rgb(224, 224, 224);
+}
+
+.form-control:focus {
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+	border-color: #d9650c;
+	outline: 0;
+	box-shadow: 0 0 0 .25rem #ee6a0687;
+}

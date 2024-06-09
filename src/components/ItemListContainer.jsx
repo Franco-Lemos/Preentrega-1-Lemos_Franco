@@ -1,20 +1,33 @@
-import "./Styles/ItemListContainer.css"
+import "./Styles/Title.css";
 import ItemList from "./itemList";
 import useProducts from "./Hooks/useProducts";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer({say}){
-  const {isLoading, products} = useProducts();
+function ItemListContainer({ say }) {
+  const { id } = useParams();
+  const { isLoading, products } = useProducts(id);
 
-  if(isLoading) return <div className="loadingContainer"><h1 className="loadingText">Cargando...</h1></div>
-  
+  const category = id ? id.charAt(0).toUpperCase() + id.slice(1) : '';
+  const dynamicSay = say.replace("{category}", category);
+
+  if (isLoading) return (
+    <div className="loadingContainer">
+      <div className="spinner-border text-light" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  );
+
   return (
     <div>
-      <div className="title">
-        <h2 className="container-fluid welcome text-center col-sm-9 col-md-7 col-lg-9 mt-5">{say}</h2>
+      <div className="d-flex justify-content-center m-5">
+        <div className="title">
+          <h2 className="welcome">{dynamicSay}</h2>
+        </div>
       </div>
       <ItemList products={products} />
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;
