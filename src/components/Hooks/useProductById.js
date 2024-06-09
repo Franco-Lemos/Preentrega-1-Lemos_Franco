@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-// import { useEffect, useState } from "react";
-// import { doc, getDoc } from "firebase/firestore";
-// import db from "../Hooks/firebase";
-
-// export default function useProductById(productId) {
-//   const [product, setProduct] = useState(null);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     const fetchProduct = async () => {
-//       const productRef = doc(db, "items", productId);
-//       const productSnap = await getDoc(productRef);
-//       if (productSnap.exists()) {
-//         setProduct({ id: productSnap.id, ...productSnap.data() });
-//       } else {
-//         setProduct(null);
-//       }
-//       setLoading(false);
-//     };
-
-//     fetchProduct();
-//   }, [productId]);
-
-//   return {
-//     product,
-//     loading,
-//   };
-// }
-
-// src/hooks/useProductById.js
 import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import db from "./firebase";
@@ -57,28 +26,3 @@ const useProductById = (id) => {
 };
 
 export default useProductById;
-=======
-import { useEffect, useState } from "react";
-import { getProductById } from "../Mocks/asyncMock";
-
-export default function useProductById(productId) {
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  console.log({ product });
-
-  useEffect(() => {
-    getProductById(productId)
-      .then((product) => {
-        setProduct(product);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-    }, [productId]);
-
-  return {
-    product,
-    loading,
-  };
-}
->>>>>>> 9f6001387f146354158d1fb86c071679140917e5
