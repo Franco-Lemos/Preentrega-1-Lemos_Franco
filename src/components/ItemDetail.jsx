@@ -18,6 +18,7 @@ function ItemDetail() {
 
   const handleAddToCart = () => {
     addToCart(item, count);
+    navigate('/cart');
     reset();
   };
 
