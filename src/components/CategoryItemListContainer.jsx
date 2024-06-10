@@ -1,10 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
 import { getProductByCategory } from '../components/Hooks/getProducts';
-=======
-import { getProductByCategory } from '../components/Mocks/asyncMock';
->>>>>>> 9f6001387f146354158d1fb86c071679140917e5
 import Item from '../components/item';
 import CartContext from '../context/CartContext';
 
