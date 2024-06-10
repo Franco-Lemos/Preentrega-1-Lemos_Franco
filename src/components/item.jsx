@@ -1,22 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useCount from "./Hooks/useCount";
-import ItemCount from "./ItemCount";
 import CartContext from '../context/CartContext';
 import "./Styles/Item.css";
 
 export default function Item({ item }) {
-  const { count, increment, decrement } = useCount(0);
-  const [showItemCount, setShowItemCount] = useState(true);
-  const { addToCart, cart } = useContext(CartContext);
-  const navigate = useNavigate();
-
-  const handleAddToCart = () => {
-    addToCart(item, count);
-    setShowItemCount(false);
-    navigate('/cart');
-  };
-
+  const { count} = useCount(0);
+  const {cart } = useContext(CartContext);
   const currentCartItem = cart.find(cartItem => cartItem.product.id === item.id);
   const currentStock = currentCartItem ? item.stock - currentCartItem.quantity : item.stock;
 
@@ -31,31 +21,10 @@ export default function Item({ item }) {
         </Link>
         <p className="itemDescription">{item.description}</p>
         <div className="buyContainer">
-          <p className="itemPrice p-3">${item.price}</p>
-          <div>
-            {showItemCount && (
-              <div className="itemCounterContainer">
-                <ItemCount 
-                  stock={currentStock}
-                  count={count}
-                  increment={increment}
-                  decrement={decrement}
-                />
-              </div>
-            )}
-            <div className="itemCartContainer mt-2">
-              <button 
-                className={`buttonAddToCart ${count === 0 || count > currentStock ? 'disabled' : ''}`} 
-                onClick={handleAddToCart} 
-                disabled={count === 0 || count > currentStock}
-              >
-                Añadir al carrito
-              </button>
-            </div>
-          </div>
+          <p className="itemPrice d-flex justify-content-center p-3">Precio ${item.price}</p>
         </div>
-        <div id='aqui'>
-          <p className='remainingStock d-flex justify-content-center my-3'>
+        <div className='d-flex justify-content-center'>
+          <p className='remainingStock my-3'>
             Unidades disponibles: <strong>{currentStock - count}</strong>
           </p>
         </div>
