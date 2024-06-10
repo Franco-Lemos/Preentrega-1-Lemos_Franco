@@ -1,7 +1,6 @@
 import Brand from "./Brand";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import "./Styles/Layout.css";
 import "./Styles/NavBar.css"
 
 export default function Layout ({ children }) {
