@@ -41,7 +41,6 @@ hr{
 }
 .buttonFinalize:hover {
   background: #29cf37;
-<<<<<<< HEAD
 }
 
 .formContainer {
@@ -64,6 +63,23 @@ hr{
 	border-color: #d9650c;
 	outline: 0;
 	box-shadow: 0 0 0 .25rem #ee6a0687;
-=======
->>>>>>> 9f6001387f146354158d1fb86c071679140917e5
+}
+
+.f-content {
+	max-width: fit-content;
+}
+
+.vh-40 {
+	height: 40vh;
+}
+
+.vh-80 {
+	height: 80vh;
+}
+
+@media (max-width: 575px) {
+	.col-xs-12 {
+			flex: 0 0 auto;
+			width: 100%;
+	}
 }
